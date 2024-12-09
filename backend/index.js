@@ -10,7 +10,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '#',
+    password: '#',//huske at indsæt mysql kode
     database: 'ukraine'
 });
 
@@ -26,25 +26,13 @@ db.connect((err) => {
 // Endpoint: Hent data til visualisering
 app.get('/graf', (req, res) => {
     const query = `
-        SELECT 
-            classification.ccpost_id,
-            sourcepop.ccpageid,
-            sourcepop.name,
-            sourcepop.category,
-            sourcepop.country,
-            classification.gpt_ukraine_for_imod,
-            classification.all_post_text,
-            metrics.post_type,
-            metrics.reactions,
-            time.date
+            SELECT 
+            gpt_ukraine_for_imod AS stance,
+            COUNT(*) AS count
         FROM 
             classification
-        INNER JOIN 
-            time ON classification.ccpost_id = time.ccpost_id
-        INNER JOIN 
-            metrics ON classification.ccpost_id = metrics.ccpost_id
-        INNER JOIN 
-            sourcepop ON metrics.ccpageid = sourcepop.ccpageid;
+        GROUP BY 
+            gpt_ukraine_for_imod;
     `;
     db.query(query, (err, results) => {
         if (err) {

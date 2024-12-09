@@ -13,4 +13,7 @@ h1 {
     font-size:40px;
 }
 
-
+canvas {
+    width: 80%;
+    margin: 20px auto;
+}
