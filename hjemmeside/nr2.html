@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Støt Ukraine via Sociale Medier</title>
     <link rel="stylesheet" href="ukraine.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 <header>
@@ -17,21 +18,18 @@
         </ul>
     </nav>
 </header>
-
-<main>
-    <section>
-        <h1 class="forskift"></h1>
-        <canvas id="chart"></canvas>
-    </section>
-
-</main>
-
+<section>
+    <h1 class="forskift">Geografisk Visualisering</h1>
+    <div id="map" style="height: 900px; width: 90%;"></div>
+</section>
 <footer>
-    <p>© Lavet af Nixhajete og Sahra</p>
+    <p>© Lavet af Nihajete og Sahra</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="ukraine.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
+
