@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const latLng = getCountryLatLng(item.country); // Funktion til at konvertere land til koordinater
                 if (latLng) {
                     L.circleMarker(latLng, {
-                        radius: Math.sqrt(item.count) * 2, // Boblestørrelse baseret på rapporter
-                        color: item.category === 'Media' ? 'blue' : 'green', // Farve baseret på kategori
+                        radius: Math.sqrt(item.count) * 3, // Boblestørrelse baseret på rapporter
+                        color: item.category === 'Media' ? 'black' : 'green', // Farve baseret på kategori
                         fillOpacity: 0.6
                     })
                         .bindPopup(`<b>${item.country}</b><br>${item.category}: ${item.count}`)
