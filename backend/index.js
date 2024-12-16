@@ -27,13 +27,19 @@ db.connect((err) => {
 // Endpoint 1: Hent data om holdninger (stance)
 app.get('/graf/stance', (req, res) => {
     const query = `
-        SELECT 
-            gpt_ukraine_for_imod AS stance,
-            COUNT(*) AS count
-        FROM 
-            classification
-        GROUP BY 
-            gpt_ukraine_for_imod;
+  SELECT 
+    c.gpt_ukraine_for_imod AS stance,
+    COUNT(*) AS count
+FROM 
+    classification c
+JOIN 
+    ukraine.time t
+    ON c.ccpost_id = t.ccpost_id
+WHERE 
+    t.year = 2022
+GROUP BY 
+    c.gpt_ukraine_for_imod;
+
     `;
     db.query(query, (err, results) => {
         if (err) {
@@ -44,7 +50,32 @@ app.get('/graf/stance', (req, res) => {
     });
 });
 
-// Endpoint 2: Hent data om medietyper og lande
+// Endpoint 2: Hent data om holdninger (stance24)
+app.get('/graf/stance24', (req, res) => {
+    const query = `
+  SELECT 
+    c.gpt_ukraine_for_imod AS stance,
+    COUNT(*) AS count
+FROM 
+    classification c
+JOIN 
+    ukraine.time t
+    ON c.ccpost_id = t.ccpost_id
+WHERE 
+    t.year = 2024
+GROUP BY 
+    c.gpt_ukraine_for_imod;
+    `;
+    db.query(query, (err, results) => {
+        if (err) {
+            console.error('Databaseforespørgselsfejl:', err);
+            return res.status(500).json({ error: 'Databasefejl' });
+        }
+        res.json(results);
+    });
+});
+
+// Endpoint 3: Hent data om medietyper og lande
 app.get('/graf/media-country', (req, res) => {
     const query = `
         SELECT 
