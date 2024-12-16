@@ -4,38 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Støt Ukraine via Sociale Medier</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="ukraine.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 <header>
-    <div class="header-container">
-        <h1>Sammen kan vi gøre en forskel!</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="ukraine.html">Visualisering 1</a></li>
-                <li><a href="nr2.html">Visualisering 2</a></li>
-
-            </ul>
-        </nav>
-    </div>
+    <h1>Sammen kan vi gøre en forskel!</h1>
+    <nav>
+        <ul>
+            <li><a href="ukraine.html">Visualisering 1</a></li>
+            <li><a href="nr2.html">Visualisering 2</a></li>
+            <li><a href="#visual3">Visualisering 3</a></li>
+        </ul>
+    </nav>
 </header>
-
-<section class="hero">
-    <div class="hero-content">
-        <h2>Støt Ukraine og gør en forskel gennem data</h2>
-        <p>Gennem visuelle repræsentationer kan vi analysere og forstå støtten til Ukraine. Tag del i bevægelsen og se, hvordan sociale medier og globale holdninger spiller en rolle.</p>
-    </div>
+<section>
+    <h1 class="forskift">Geografisk Visualisering</h1>
+    <div id="map" style="height: 900px; width: 90%;"></div>
 </section>
-
-<section class="visual-section" id="visual3">
-    <h2>Visualisering 3: Geografisk analyse</h2>
-    <div id="map" style="height: 500px; width: 90%; margin: 0 auto; border-radius: 10px; border: 1px solid #ddd;"></div>
-</section>
-
-<!-- Footer -->
 <footer>
-    <p>© 2024 Lavet af Nixhajete og Sahra</p>
+    <p>© Lavet af Nixhajete og Sahra</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

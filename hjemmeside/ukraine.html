@@ -3,50 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Støt Ukraine via Sociale Medier</title>
     <link rel="stylesheet" href="ukraine.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ukraine.js"></script>
+    <title>Støt Ukraine</title>
 </head>
 <body>
-<!-- Header med navigation -->
-<header>
-    <div class="header-container">
-        <h1>Sammen kan vi gøre en forskel!</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="ukraine.html">Visualisering 1</a></li>
-                <li><a href="nr2.html">Visualisering 2</a></li>
 
-            </ul>
-        </nav>
+<header>
+    <div class="top-bar">
+        <div class="left">
+            <a href="tel:+4522343901">KONTAKT +45 22 34 39 01</a>
+        </div>
+        <div class="right">
+            <a href="https://lex.dk/Ukraine-konflikten">LÆS OM KRISEN</a>
+            <a href="https://mobilepay.dk/">DONÉR</a>
+        </div>
     </div>
+    <div class="divider"></div>
 </header>
 
-<!-- Hero sektion -->
-<section class="hero">
-    <div class="hero-content">
-        <h2>Støt Ukraine og gør en forskel gennem data</h2>
-        <p>Gennem visuelle repræsentationer kan vi analysere og forstå støtten til Ukraine. Tag del i bevægelsen og se, hvordan sociale medier og globale holdninger spiller en rolle.</p>
-    </div>
-</section>
-
-<!-- Visualiseringer -->
 <main>
+    <h1>sammen kan vi gøre en forskel</h1>
+    <section class="billede1">
+        <p class="flytbillede1_tekst">
+            Ukraine har brug for vores støtte, mere end noget andet.
+            <br>principper, og skabe global opmærksomhed.
+            <br>Ved hjælp af digitale platforme, og sociale medier
+            <br>kan vi øge muligheden for at dele budskaber,
+            <br>principper, og skabe global opmærksomhed.</p>
+        <img src="img/ukraine1.jpg" class="flyt-billede1">
+    </section>
     <section class="visual-section" id="visual1">
         <h2>Visualisering 1: Overblik over data</h2>
         <canvas id="chart"></canvas>
     </section>
 
+    <section class="billede2">
+        <img src="img/flygtninge.png" class="flygtninge">
+        <div class="billede2_tekst">
+            <h2>Hvorfor har Ukraine brug for støtte?</h2>
+            <p>Krigen i Ukraine opstod, da Rusland i 2022 invaderede landet
+                og forsøgte at ændre dets suverænitet med magt.
+                Dette har forårsaget enorm ødelæggelse, tab af tusindvis af menneskeliv og gjort millioner af mennesker til flygtninge.
+                Infrastruktur og økonomi er blevet ødelagt, og Ukraine har brug for international støtte for at overleve og genopbygge.
+                Uden hjælp risikerer Ukraine at blive underlagt et autoritært regime, hvilket kunne sende et farligt signal om, at lande kan erobres med magt.
+                Det kunne føre til større destabilisering i Europa og andre steder, hvilket vil have langsigtede konsekvenser for global sikkerhed og demokrati.
+                Derfor er det afgørende at støtte Ukraine i denne kritiske tid.
+                </p>
+        </div>
+    </section>
+
+    <section class="visual-section" id="visual3">
+        <h2>Visualisering 3: Geografisk analyse</h2>
+        <div id="map" style="height: 500px; width: 90%; margin: 0 auto; border-radius: 10px; border: 1px solid #ddd;"></div>
+    </section>
+
+
+    <section class="billede3">
+        <div class="billede3_text">
+        <h4>Hvorfor sociale medier?</h4>
+        <h5>Sociale medier er en fantastisk måde at øge støtten til Ukraine på!
+            Det er her, Gen Z og millennials – de mest indflydelsesrige generationer på sociale medier – virkelig skinner.
+            De skaber trends, former meninger og har magten til at få budskaber til at gå viralt.
+            Og lad os ikke glemme: de er vores fremtid! At engagere dem via sociale medier er en kæmpe game-changer, der kan samle verden om at støtte Ukraine.
+        </h5> </div>
+        <img src="img/soocialemedieriverden.png" class="socialemedier" alt="Social media impact">
+    </section>
+
+
 </main>
 
-<!-- Footer -->
 <footer>
-    <p>© 2024 Lavet af Nixhajete og Sahra</p>
+    <p>&copy; 2024 Ukraine Support. All Rights Reserved.</p>
 </footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="ukraine.js"></script>
 
 </body>
 </html>
