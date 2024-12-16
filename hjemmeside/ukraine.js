@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Holdninger blandt politikere 2022',
+                        label: 'Holdninger i 2022',
                         data: counts,
                         backgroundColor: [
                             'rgba(75, 192, 192, 0.6)', // "For"
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Holdninger blandt politikere 2024',
+                        label: 'Holdninger i 2024',
                         data: counts,
                         backgroundColor: [
                             'rgba(75, 192, 192, 0.6)', // "For"
