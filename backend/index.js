@@ -11,7 +11,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '#', // Husk at indsætte din MySQL adgangskode
+    password: 'S98156730ara?', // Husk at indsætte din MySQL adgangskode
     database: 'ukraine'
 });
 
@@ -48,7 +48,7 @@ app.get('/graf/stance', (req, res) => {
 app.get('/graf/media-country', (req, res) => {
     const query = `
         SELECT 
-    country,
+        country,
     category,
     COUNT(*) AS count
 FROM 
