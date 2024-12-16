@@ -7,30 +7,45 @@
     <link rel="stylesheet" href="ukraine.css">
 </head>
 <body>
+<!-- Header med navigation -->
 <header>
-    <h1>Sammen kan vi gøre en forskel!</h1>
-    <nav>
-        <ul>
-            <li><a href="ukraine.html">Visualisering 1</a></li>
-            <li><a href="nr2.html">Visualisering 2</a></li>
-            <li><a href="#visual3">Visualisering 3</a></li>
-        </ul>
-    </nav>
+    <div class="header-container">
+        <h1>Sammen kan vi gøre en forskel!</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="ukraine.html">Visualisering 1</a></li>
+                <li><a href="nr2.html">Visualisering 2</a></li>
+
+            </ul>
+        </nav>
+    </div>
 </header>
 
+<!-- Hero sektion -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Støt Ukraine og gør en forskel gennem data</h2>
+        <p>Gennem visuelle repræsentationer kan vi analysere og forstå støtten til Ukraine. Tag del i bevægelsen og se, hvordan sociale medier og globale holdninger spiller en rolle.</p>
+    </div>
+</section>
+
+<!-- Visualiseringer -->
 <main>
-    <section>
-        <h1 class="forskift"></h1>
+    <section class="visual-section" id="visual1">
+        <h2>Visualisering 1: Overblik over data</h2>
         <canvas id="chart"></canvas>
     </section>
 
 </main>
 
+<!-- Footer -->
 <footer>
-    <p>© Lavet af Nixhajete og Sahra</p>
+    <p>© 2024 Lavet af Nixhajete og Sahra</p>
 </footer>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="ukraine.js"></script>
 
 </body>
